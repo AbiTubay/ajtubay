@@ -1,1 +1,1 @@
-# portfolio
+Portfolio website using HTML, CSS (bootstrap, icons8), JQuery
