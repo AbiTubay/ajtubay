@@ -94,12 +94,13 @@
             let data = {};
             $(infoArray).each(function(i, field){
                 if (field.name == "result") {
-                    const resp = $("#accept").val() == "on" ? "We're Coming!" : "Sorry! We won\'t be able to make it.";
+                    const resp = $("#accept").is(":checked") ? "We're Coming!" : "Sorry! We won\'t be able to make it.";
                     data['result'] = resp;
                 } else {
                     data[field.name] = field.value;
                 }
             });
+            // console.log(data);
             sendEmail(data);
         });
     });
