@@ -140,9 +140,9 @@
             return true;
         }
         
-        function sendEmail(templateParams) {
+        async function sendEmail(templateParams) {
             // console.log(templateParams);
-            emailjs.send('service_rsvp', 'template_rsvp', templateParams).then(() => {
+            await emailjs.send('service_rsvp', 'template_rsvp', templateParams).then(() => {
                 if (templateParams['result'] == "We're Coming!") {
                     alert('Thank you for your reply! We\'ll see you there!');
                 } else {
