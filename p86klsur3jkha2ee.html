@@ -12,7 +12,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
-            emailjs.init({publicKey: "ZAAKkViZceyrQW4Ak"});
+            emailjs.init({publicKey: "ZAAKkViZceyrQW4Ak",});
         })();
     </script>
     <title>RSVP</title>
@@ -97,7 +97,7 @@
             $('#send').on('click', (e) => {
                 e.preventDefault();
                 // console.log('sending');
-                const infoArray = $("#rsvp").serializeArray()
+                const infoArray = $("#rsvp").serializeArray();
                 infoArray.push({name: 'result', value: ""});
                 
                 let data = {};
